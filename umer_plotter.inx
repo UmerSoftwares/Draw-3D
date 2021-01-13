@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Draw 3D GCODE Generator</_name>
+    <id>umerelectronics.com/plotterextension</id>
+	<dependency type="executable" location="extensions">umer_plotter.py</dependency>
+	<dependency type="executable" location="extensions">inkex.py</dependency
+	
+			<param name="offsets" type="description" appearance="header">Offsets</param>
+			<param name="x-offset" type="int" min="0" max="300" _gui-text="X Offset (mm):">40</param>
+			<param name="y-offset" type="int" min="0" max="300" _gui-text="Y Offset (mm):">35</param>
+			<param name="z-offset" type="int" min="0" max="500" _gui-text="Z Offset (mm):">40</param>
+	
+			<param name="dimensions" type="description" appearance="header">Bed Dimensions</param>
+			<param name="x-bed" type="int" min="0" max="1000" _gui-text="Bed Size X Axis (mm):">235</param>
+			<param name="y-bed" type="int" min="0" max="1000" _gui-text="Bed Size Y Axis (mm):">235</param>
+			
+			<param name="plot-info" type="description" appearance="header">Plotting Information</param>
+			<param name="pen-lift" type="int" min="0" max="100" _gui-text="Pen Lift Height (mm):">5</param>
+			<param name="drawing-speed" type="int" min="0" max="15000" _gui-text="Drawing Speed (mm/s):">50</param>
+			<param name="travel-speed" type="int" min="0" max="15000" _gui-text="Travel Speed (mm/s):">120</param>
+			<param name="passes" type="int" min="1" max="100" _gui-text="Passes:">1</param>
+			<param name="output-info" type="description" appearance="header">Output</param>
+			<param name="directory" type="string" _gui-text="Output Directory:"></param>
+			<param name="filename" type="string" _gui-text="Output Filename:">output.gcode</param>
+			<param name="add-numeric-suffix-to-filename" type="boolean" _gui-text="Add numeric suffix to filename">true</param>	
+
+	<effect>
+		<effects-menu>
+			<submenu _name="Generate Plotter Gcode"/>
+		</effects-menu>
+		<object-type>path</object-type>
+  	</effect>
+
+	<script>
+		<command reldir="extensions" interpreter="python">umer_plotter.py</command>
+	</script>
+
+</inkscape-extension>
