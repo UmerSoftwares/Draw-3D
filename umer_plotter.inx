@@ -3,7 +3,7 @@
     <_name>Draw 3D GCODE Generator</_name>
     <id>umerelectronics.com/plotterextension</id>
 	<dependency type="executable" location="extensions">umer_plotter.py</dependency>
-	<dependency type="executable" location="extensions">inkex.py</dependency
+	<dependency type="executable" location="extensions">inkex.py</dependency>
 	
 			<param name="offsets" type="description" appearance="header">Offsets</param>
 			<param name="x-offset" type="int" min="0" max="300" _gui-text="X Offset (mm):">40</param>
